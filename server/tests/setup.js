@@ -16,6 +16,9 @@ beforeAll(async () => {
   await mongoose.connect(mongoUri, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
+    serverSelectionTimeoutMS: 30000,
+    socketTimeoutMS: 30000,
+    connectTimeoutMS: 30000,
   });
 });
 
