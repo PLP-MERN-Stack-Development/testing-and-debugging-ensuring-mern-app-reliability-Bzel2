@@ -1,0 +1,42 @@
+{
+  "name": "mern-bug-tracker",
+  "version": "1.0.0",
+  "description": "MERN Stack Bug Tracker with Testing and Debugging Best Practices",
+  "private": true,
+  "scripts": {
+    "start:backend": "node dev-setup.js start:backend",
+    "start:frontend": "node dev-setup.js start:frontend", 
+    "start:both": "node dev-setup.js start:both",
+    "test:backend": "node dev-setup.js test:backend",
+    "test:frontend": "node dev-setup.js test:frontend",
+    "test:all": "node dev-setup.js test:all",
+    "install:backend": "cd backend && npm install",
+    "install:frontend": "cd frontend && npm install",
+    "install:all": "npm run install:backend && npm run install:frontend",
+    "setup": "node dev-setup.js",
+    "postinstall": "npm run install:all"
+  },
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "keywords": [
+    "mern",
+    "bug-tracker", 
+    "testing",
+    "debugging",
+    "mongodb",
+    "express",
+    "react",
+    "nodejs"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  }
+}
